@@ -6,3 +6,7 @@ def about(request):
 
 def home(request):
     return render(request, 'home.html')
+
+def reverse(request):
+    vice_text = request.GET['vice']
+    return render(request, 'reverse.html', {'user_text' : vice_text[::-1]})    
